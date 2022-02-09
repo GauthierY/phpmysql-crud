@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col"><h1>Editer</h1>
 
-                <form method="post" action="post.php">
+                <form method="post" action="update.php">
                     <div class="mb-3">
                         <label  class="form-label">Nom</label>
                         <input type="text" value="<?php echo $nom?>" name="nomProduit" class="form-control">
@@ -36,7 +36,8 @@
                         <label  class="form-label">prix</label>
                         <input type="number" value="<?php echo $prix?>" name="prixProduit" class="form-control">
                     </div>
-                    <button type="submit" name="tintin" class="btn btn-primary">ajouter</button>
+                    <input type="hidden" name="idProduit" value=<?php echo $id;?>>
+                    <button type="submit" name="tintin" class="btn btn-primary">editer</button>
                     <a href="index.php">annuler</a>
                 </form>
             </div>
