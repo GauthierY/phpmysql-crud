@@ -45,7 +45,7 @@ $listeDesProduits = $crud->getData($query);
         echo "<th>".$produit['id']."</th>";
         echo "<td>".$produit['nom']."</td>";
         echo "<td>".$produit['prix']."</td>";
-        echo "<td><a href=\"editer.php?id=$produit[id]\">Edit</a> | <a href=\"delete.php?id=$produit[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";    
+        echo "<td><a href=\"editer.php?id=$produit[id]\">Edit</a>  | <a href=\"delete.php?id=$produit[id]\" onClick=\"return confirm('Voulez vous supprimer ?')\">Delete</a></td>";    
         echo "</tr>";
     }
     ?>
