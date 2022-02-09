@@ -21,7 +21,25 @@ class Crud extends DbConfig {
         
         return $rows;
     }
-    // ajouter un produit Create 
+
+    // recuperer les valeurs d'un formulaire pour envoyer dans la base de donnee
+    // ex : escape_string("mario bros") 
+    public function escape_string($value)
+    {
+        return $this->connection->real_escape_string($value);
+    }
+    // execute une requete 
+    public function execute($query) 
+    {
+        $result = $this->connection->query($query);
+        
+        if ($result == false) {
+            echo 'Error: cannot execute the command';
+            return false;
+        } else {
+            return true;
+        }        
+    }
     // mettre a jour un produit Update
     // supprimer un produit Delete
     

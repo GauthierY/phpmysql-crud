@@ -21,6 +21,7 @@ $listeDesProduits = $crud->getData($query);
     <div class="container">
         <div class="row">
             <div class="col">
+                <a href="ajouter.php">ajouter</a>
                 <h1>Gestion de stock</h1> 
                 <table class="table">
   <thead>
